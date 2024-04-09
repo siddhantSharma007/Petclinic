@@ -77,7 +77,7 @@ resource "aws_security_group" "my_sg" {
 # Create EC2 instance
 resource "aws_instance" "web_ec2_instance" {
   ami                    = "ami-08116b9957a259459"  # Replace with your desired AMI ID for web tier
-  key_name               = "cicd"
+  key_name               = "demo"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.subnet_a.id
   vpc_security_group_ids = [aws_security_group.my_sg.id]
